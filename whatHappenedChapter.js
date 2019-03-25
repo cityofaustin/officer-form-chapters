@@ -3,6 +3,7 @@ import {
   DateReviewWidget,
   TimeWidget,
   TimeReviewWidget,
+  LargeTextAreaReviewWidget,
 } from "@cityofaustin/usfs-components";
 
 const whatHappenedChapter = {
@@ -42,7 +43,11 @@ const whatHappenedChapter = {
         "ui:title": "Tell us what happened",
         description: {
           "ui:title": "Describe your experience with the Austin Police Department.",
-          "ui:widget": "textarea"
+          "ui:widget": "textarea",
+          "ui:reviewWidget": LargeTextAreaReviewWidget,
+          "ui:options": {
+            reviewDirection: "column"
+          }
         },
         datetime: {
           "ui:title": "When did it happen?",
